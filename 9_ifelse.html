@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if elseif else</title>
+</head>
+<body>
+<script>
+const time = new Date().getHours();
+//상수 시간은 = 시간객체에 시간을 대입
+let greeting; //변수 인사말은 선언만 상황에 따라 다르기 떄문에
+//가정법 사용
+if(time < 10) {
+    greeting = "good morning";
+} else if (time < 20) {
+    greeting = "good day"
+} else {
+    greeting = "good evening"
+}
+document.write(greeting);
+</script> 
+<h1>Conditional Statements 조건문</h1>
+<pre>
+if : 지정된 조건이 참인 경우 실행
+else : 동일한 조건이 거짓인 경우 실행할 코드블록을 지정하는데 사용
+elseif : 첫번째 조건이 거짓인 경우에 테스트할 새 조건을 지정할 때 사용
+파이선에서는 elif
+syntax
+if(condition){
+
+}else if (condition2) {
+
+}else{
+
+}
+</pre>
+</body>
+</html>

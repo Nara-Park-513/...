@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+<h1>삼항연산자(Ternary)</h1>
+<input type="text" id="age">
+<button onclick="HowOldAreYou()">눌러보아요</button>
+<p id="find"></p>
+<script>
+HowOldAreYou = () => {//화살표 함수
+//1)도큐먼트 age 아이디 찾기
+let age = document.getElementById("age").value;
+//변수age에 도큐먼트에서 찾은 아이디 age에 입력 값을 대입
+//2)삼항연산자로 입력값에 따라 값이 출력되게 설정
+let voteable = (age < 28) ? "영한데":"고조느님";
+//document.write(voteable);
+//3)메세지를 출력하는 장치를 만듬
+document.getElementById("find").innerHTML =" 당신은" + voteable;
+}
+</script>
+<pre>
+(condition) ? value1(true):value2(false)
+</pre>
+<H1>논리연산자</H1>
+<P>논리연산자는 변수나 값 사이에 논리를 결정하는데 사용됩니다</P>
+<script>
+//1)그리고
+let r = 6; let t = 3; document.write(r < 10 && t > 1);
+document.write(r < 10 && t < 1 + "<br/>");
+//2)둘중하나
+document.write(r===6 || t===10 + "<br/>");
+//3)같지 않은
+document.write(!(5 == 8 + "<br/>"));
+</script>
+<pre>
+&& AND => (x < 10 && y > 1) 두가지 요건이 성립해야만 참입니다
+|| or 둘중에 하나만 성립하면 참
+! NOT 같지 않으면 true
+</pre>
+<h1>비교연산자 : 두값을 비교하는데 사용합니다</h1>
+<script>
+console.log("A".charCodeAt(0));
+console.log("가".charCodeAt(0));
+let text1 = "A"; let text2 = "B";
+let result = text1 < text2;
+document.write("유니코드란 : 전세계의 모든 문자를 하나의 표준체계로 하기 위해 고유의 숫자코드를 부여한 것 A = 65, B = 66" + result);
+document.write("영어는 ASCII 한국어는 EUC-KR 일본어는 SHIFT-JIS");
+document.write("이래서 서로 다른 언어를 함꼐 사용하는데 문제가 생김..");
+document.write("글자가 깨지거나 잘못 표시됨");
+document.write("모든 문자를 하나로 통일한 것이 유니코드 입니다");
+</script>
+<pre>
+== : 타입을 고려하지 않은 같은지를 확인
+5[숫자] == '5'[문자열] 타입을 고려하지 않은 같음 true
+=== : 타입까지 고려하여 같음 5===5 5==='5'
+!= : 같지 않음을 확인 같지 않으면 진실 같으면 거짓
+!== : 값도 틀리고 타입도 틀린 엄격하게 같지 않음
+> : 보다 큰
+< : 보다 작은
+>= : 크거나 같은 것 중 둘중에 하나만 맞으면 성립
+<= : 작거나 같은 것 중 둘중에 하나만 맞으면 성립
+</pre>
+
+<h1>할당연산자</h1>
+<p>변수에 값을 할당합니다</p>
+<script>
+let q = 10; q += 5;
+document.write(q);
+let w = 10; w-= 5;
+document.write(w);
+</script>
+<pre>
+= : 값을 할당
++= : 기존의 값에 값을 추가 add
+-= : 기존의 값에서 값을 뺴주는 것
+*= : 기존의 값을 곱해주는 것
+/= : 나누기는
+%= : 나눈 나머지는
+**= : 거듭제곱
+</pre>
+<h1>산술연산자</h1>
+<pre>
+우선순위
+(100 + 50) * a;
+</pre>
+<script>
+//감소
+let minus = 100;
+minus--;
+let print = minus;
+document.write(print);
+</script>
+</body>
+</html>

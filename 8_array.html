@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단일 변수에 여러값을 사용할 떄는 배열을 사용합니다</title>
+</head>
+<body>
+<h1>지정된 범위만큼 반복하는 걸 loop</h1>
+<script>
+const fs = ["바나나","오렌지","사과","망고"]
+//변수 fs배열은 
+let fl = fs.length;
+//변수 fl은 배열에 가지고 있는 갯수
+let text = "<ul>";
+for(let i=0; i < fl; i++) {//코드블럭
+text += "<li>" + fs[i] + "</li>";
+//변수 텍스트에 li를 열고 거기안에 각각의 과일 이름을 넣고 /로 마감합니다.
+}
+text += "</ul>";
+
+document.write(text);
+    
+    //변수 텍스트는 태그ul을 대입
+//반복 지정된 범위만큼 실행하는 걸 개발에서 반복이라 합니다
+//반복을 할 떄 대표적으로 사용하는 것이 for입니다
+//syntax
+//for (let i=0; i < fl.length; 범위 i++ 각각의 개별증가 )
+</script>
+
+
+
+<h1>배열의 길이 : 배열에서 가지고 있는 갯수를 말한다 .length</h1>
+<script>
+const fruits = ["바나나","오렌지","사과","망고"]
+let fruit = fruits.length;
+document.write(fruit);
+</script>
+<pre>
+- 아래의 배열에 순서는 이렇게 됩니다
+[0][1][2][3][4]
+- 자바스크립트, 리액트, 뷰, C, C++, C#, 파이선 모두 첫번째 색인은(index) 0
+</pre>
+<script>
+const cars = ["kia","hyundai","Saab","BMW","meced"]
+let WhatArray = "단일 변수에 여러값을 사용하는 솔루션";
+document.write(cars);
+document.write("+++++++++++++++++++++");
+document.write(cars[0]);
+</script>
+</body>
+</html>

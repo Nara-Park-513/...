@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>반응형웹 기본</title>
+</head>
+<body>
+<h1>Media Queries</h1>
+<p>윈도우에서 브라우저 사이즈를 조정해주세요</p>
+<p>브라우저를 800px이하로</p>
+
+<div class="left">
+    <p>left menu</p>
+</div>
+<div class="main">
+    <p>main content</p>
+</div>
+<div class="right">
+    <p>right content</p>
+</div>
+<style>
+html, html * {
+    box-sizing: border-box;
+}
+.left{background-color: #2196f3; padding:20px; float:left; width:20%;}
+.main{background: #f1f1f1; padding: 20px; float: left; width: 60%;}
+.right{background: #04aa6d; padding: 20px; float: left; width: 20%;}
+
+@media screen and (max-width:800px){/*미디어의 크기가 800px 이하일때*/
+.left, .main, .right{
+    width: 100%;
+}
+}
+</style>
+</body>
+</html>
